@@ -151,7 +151,9 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname+'/dist/frontend/index.html'));
  }); 
 
-app.listen(5000, function(){
-    console.log('listening to port 5000');
+ const PORT = process.env.PORT || 3000
+
+app.listen(PORT, function(){
+    console.log(`listening to port ${PORT}`);
 });
 
