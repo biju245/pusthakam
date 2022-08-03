@@ -151,7 +151,7 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname+'/dist/frontend/index.html'));
  }); 
 
-app.listen(8080, function(){
-    console.log('listening to port 8080');
+app.listen(5000, function(){
+    console.log('listening to port 5000');
 });
 
