@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Library',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-}).then(console.log("Mongo Connected"))
-.catch(err => console.log(err));
+const dotenv = require('dotenv');
+dotenv.config();
+mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 const Schema = mongoose.Schema;
 
 
